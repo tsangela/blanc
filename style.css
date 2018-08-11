@@ -85,11 +85,15 @@ div.container-post {
     margin-right: 10;
     max-width: 600px;
     transition: .5s ease;
-    text-align: justify;
+
 }
 
 div.container-post h1 {
     font-family: 'Abel', sans-serif;
+}
+
+div.container-post p {
+    text-align: justify;
 }
 
 div.container-post img {
@@ -194,10 +198,11 @@ div.container-desc-body {
     }
 }
 
+
 ::selection {
-    background: #D5F4E6; /* WebKit/Blink Browsers*/
+    background: #E6E6E6; /* WebKit/Blink Browsers*/
 }
 
 ::-moz-selection {
-    background: #D5F4E6; /* Gecko Browsers */
+    background: #E6E6E6; /* Gecko Browsers */
 }
