@@ -1,16 +1,20 @@
 html {
     font-family: 'Roboto Condensed', sans-serif;
-    width: 100%;
-    height: 100%;
-
 }
 
 body {
+    width: 100%;
+    height: 100%;
     background-color: #F5F5F5;
 }
 
 h1 {
     text-transform: uppercase;
+}
+
+p {
+    font-size: 14px;
+    transition: .5s ease;
 }
 
 a {
@@ -25,27 +29,31 @@ a:active {
     font-weight: bold;
 }
 
+
 ul.nav {
-    font-family: 'Abel', sans-serif;
     background-color: white;
     width: 100px;
     height: 100%;
-    padding: 30vh 0px 0px 0px;
-    left: 0;
+    position: fixed;
     top: 0;
+    left: 0;
+    padding: 0px;
     margin: 0;
     list-style-type: none;
-    position: fixed;
-    overflow: auto;
+    font-family: 'Abel', sans-serif;
+    font-size: 16px;
     text-align: center;
-    /*border-right: 2px solid black;*/
+    overflow: auto;
+    transition: .5s ease;
 }
 
-li {
-    padding-bottom: 10px;
+ul.nav > li {
+    position: relative;
+    top: 33%;
+    line-height: 35px;
 }
 
-li a {
+ul.nav > li > a {
     color: #B3B3B3;
     text-decoration: none;
     letter-spacing: 2px;
@@ -53,16 +61,13 @@ li a {
     transition: .3s ease;
 }
 
-li a.active {
+ul.nav > li > a.active {
     color: white;
     background-color: black;
     letter-spacing: 5px;
 }
 
-li a:hover {
-    /*font-style: italic;*/
-    /*cursor: help;*/
-    /*background-color: #D5F4E6;*/
+ul.nav > li > a:hover {
     letter-spacing: 5px;
     text-decoration: none;
 }
@@ -108,10 +113,9 @@ div.container-post img:hover {
 div.container-about {
     position: fixed;
     left: 120px;
-    padding: 20px;
 }
 
-div.container-about img {
+div.container-about > img {
     width: 200px;
     transition: .5s ease;
     -webkit-filter: brightness(70%);
@@ -119,33 +123,35 @@ div.container-about img {
     border-radius: 50%;
 }
 
-div.container-about img:hover {
+div.container-about > img:hover {
     -webkit-filter: brightness(100%);
     filter: brightness(100%);
     border-radius: 10%;
 }
 
 div.container-desc {
-    background-color: white;
     width: 200px;
+    background-color: white;
     transition: .5s ease;
 }
 
 div.container-desc-header {
-    text-align: center;
     background-color: white;
     border-top: 1px solid black;
     border-bottom: 1px solid red;
-    letter-spacing: 5px;
+    text-align: center;
     text-transform: lowercase;
+    letter-spacing: 5px;
+    cursor: pointer;
 }
 
 div.container-desc-body {
-    height: 300px;
+    height: 200px;
     padding: 5px;
     font-size: 14px;
     overflow-y: scroll;
     text-align: justify;
+    display: none;
 }
 
 .date {
@@ -172,13 +178,29 @@ div.container-desc-body {
 
 @media only screen and (min-width: 600px) {
     /* For tablets: */
-    div.container-about img {
+    ul.nav {
+        font-size: 20px;
+        width: 120px;
+    }
+
+    div.container-main {
+        left: 140px;
+    }
+
+    div.container-about {
+        left: 140px;
+        /*top: 30%;*/
+    }
+
+    div.container-about > img {
         width: 250px;
     }
+
     div.container-desc {
         width: 250px;
         font-size: 16px;
     }
+
     div.container-desc-body {
         height: 250px;
     }
@@ -186,7 +208,11 @@ div.container-desc-body {
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
-    div.container-about img {
+    p {
+        font-size: 16px;
+    }
+
+    div.container-about > img {
         width: 300px;
     }
     div.container-desc {
@@ -196,6 +222,7 @@ div.container-desc-body {
     div.container-desc-body {
         height: 200px;
     }
+
 }
 
 
