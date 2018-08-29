@@ -1,5 +1,3 @@
-$(document).ready(function(){
-    $(".container-desc-header").click(function(){
-        $(".container-desc-body").slideToggle();
-    });
+$(".container-desc-header").click(function(){
+    $(".container-desc-body").slideToggle();
 });
